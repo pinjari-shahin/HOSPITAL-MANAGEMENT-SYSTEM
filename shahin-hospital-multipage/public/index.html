@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shahin Hospital | Dashboard</title>
+  <link rel="stylesheet" href="hospital.css">
+</head>
+<body>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand">✚ SHAHIN <span>HOSPITAL</span></div>
+    <p class="tagline">Care Beyond Expectations</p>
+
+    <div class="nav-label">MAIN MENU</div>
+    <nav>
+      <a class="active" href="index.html">⌂ Dashboard</a>
+      <a href="services.html">♡ Our Services</a>
+      <a href="insert.html">✚ Register Patient</a>
+      <a href="list.html">☷ All Patients</a>
+      <a href="listOne.html">⌕ Search Patient</a>
+      <a href="update.html">✎ Update Patient</a>
+      <a href="delete.html">▤ Delete Patient</a>
+    </nav>
+
+    <div class="side-note">
+      <strong>♡ Care with Compassion</strong>
+      <p>
+        Every patient matters. Making healthcare
+        management simple and organized.
+      </p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h2>Hospital Dashboard</h2>
+        <p>Welcome to Shahin Hospital Management System</p>
+      </div>
+      <span class="status">● System Active</span>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">WELCOME TO SHAHIN HOSPITAL</div>
+        <h1>
+          Caring for Lives,
+          <span>Managing with Excellence.</span>
+        </h1>
+        <p>
+          Experience a smarter way to manage patient
+          information, organize healthcare records,
+          and deliver compassionate care.
+        </p>
+        <a class="btn" href="insert.html">
+          + Register New Patient
+        </a>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <div class="stat-icon">♙</div>
+        <p>Total Registered Patients</p>
+        <h2 id="total">0</h2>
+        <small>Patients in database</small>
+      </div>
+
+      <div class="stat">
+        <div class="stat-icon">♂</div>
+        <p>Male Patients</p>
+        <h2 id="male">0</h2>
+        <small>Registered male patients</small>
+      </div>
+
+      <div class="stat">
+        <div class="stat-icon">♀</div>
+        <p>Female Patients</p>
+        <h2 id="female">0</h2>
+        <small>Registered female patients</small>
+      </div>
+    </section>
+
+    <h2 class="section-heading">Quick Actions</h2>
+
+    <section class="quick-links">
+      <a href="insert.html">
+        <span>✚</span>Register New Patient →
+      </a>
+      <a href="list.html">
+        <span>☷</span>View Patient Records →
+      </a>
+      <a href="listOne.html">
+        <span>⌕</span>Search Patient →
+      </a>
+    </section>
+
+    <div id="message"></div>
+
+    <footer class="footer">
+      © 2026 Shahin Hospital | Designed with Care
+    </footer>
+  </main>
+
+</div>
+<script src="hospital.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patient Records | Shahin Hospital</title>
+  <link rel="stylesheet" href="hospital.css">
+</head>
+<body>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand">✚ SHAHIN <span>HOSPITAL</span></div>
+    <p class="tagline">Care Beyond Expectations</p>
+    <div class="nav-label">MAIN MENU</div>
+    <nav>
+      <a href="index.html">⌂ Dashboard</a>
+      <a href="insert.html">✚ Register Patient</a>
+      <a class="active" href="list.html">☷ All Patients</a>
+      <a href="listOne.html">⌕ Search Patient</a>
+      <a href="update.html">✎ Update Patient</a>
+      <a href="delete.html">▤ Delete Patient</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h2>Patient Directory</h2>
+        <p>View and manage all registered patients</p>
+      </div>
+      <a href="insert.html" class="btn">+ Add Patient</a>
+    </header>
+
+    <section class="card">
+      <h2>Patient Records</h2>
+      <p>
+        Total records displayed:
+        <strong id="count">0</strong>
+      </p>
+
+      <input id="search" class="search"
+        type="search"
+        placeholder="Search by patient ID or patient name...">
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Patient ID</th>
+              <th>Patient Name</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Gender</th>
+              <th>Age</th>
+              <th>Patient Problem</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <p id="empty">No patient records found.</p>
+      </div>
+
+      <div id="message"></div>
+    </section>
+
+    <footer class="footer">
+      © 2026 Shahin Hospital
+    </footer>
+  </main>
+
+</div>
+<script src="hospital.js"></script>
+</body>
+</html>

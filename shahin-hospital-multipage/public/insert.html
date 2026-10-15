@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register Patient | Shahin Hospital</title>
+  <link rel="stylesheet" href="hospital.css">
+</head>
+<body>
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="brand">✚ SHAHIN <span>HOSPITAL</span></div>
+    <p class="tagline">Care Beyond Expectations</p>
+    <div class="nav-label">MAIN MENU</div>
+    <nav>
+      <a href="index.html">⌂ Dashboard</a>
+      <a class="active" href="insert.html">✚ Register Patient</a>
+      <a href="list.html">☷ All Patients</a>
+      <a href="listOne.html">⌕ Search Patient</a>
+      <a href="update.html">✎ Update Patient</a>
+      <a href="delete.html">▤ Delete Patient</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h2>Patient Registration</h2>
+        <p>Add a new patient to Shahin Hospital</p>
+      </div>
+      <span class="status">New Registration</span>
+    </header>
+
+    <section class="card">
+      <h2>✚ Personal & Medical Information</h2>
+      <p>
+        Complete the following details to register a patient.
+        Enter a unique Patient ID.
+      </p>
+
+      <form id="patientForm" data-mode="insert">
+        <div class="form-grid">
+
+          <div class="field">
+            <label>Patient ID *</label>
+            <input type="number" name="patient_id"
+              min="1" required
+              placeholder="Enter patient ID">
+          </div>
+
+          <div class="field">
+            <label>Patient Name *</label>
+            <input type="text" name="patient_name"
+              maxlength="100" required
+              placeholder="Enter patient's full name">
+          </div>
+
+          <div class="field">
+            <label>Patient Email *</label>
+            <input type="email" name="patient_email"
+              maxlength="100" required
+              placeholder="patient@example.com">
+          </div>
+
+          <div class="field">
+            <label>Patient Phone Number *</label>
+            <input type="tel" name="patient_phoneno"
+              pattern="[0-9]{10}" maxlength="10"
+              required placeholder="10-digit phone number">
+          </div>
+
+          <div class="field">
+            <label>Patient Gender *</label>
+            <select name="patient_gender" required>
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Patient Age *</label>
+            <input type="number" name="patient_age"
+              min="0" max="120" required
+              placeholder="Enter patient's age">
+          </div>
+
+          <div class="field full">
+            <label>Patient Problem *</label>
+            <select name="patient_problem" required>
+              <option value="">Select disease / concern</option>
+              <option value="Fever">Fever</option>
+              <option value="Diabetes">Diabetes</option>
+              <option value="Hypertension">Hypertension</option>
+              <option value="Asthma">Asthma</option>
+              <option value="Cardiac Disease">Cardiac Disease</option>
+              <option value="Migraine">Migraine</option>
+              <option value="Fracture">Fracture</option>
+              <option value="Respiratory Infection">Respiratory Infection</option>
+              <option value="Gastroenteritis">Gastroenteritis</option>
+              <option value="Back Pain">Back Pain</option>
+              <option value="Surgery Follow-up">Surgery Follow-up</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">
+            ✚ Register Patient
+          </button>
+          <button type="reset" class="btn secondary">
+            Clear Form
+          </button>
+        </div>
+      </form>
+
+      <div id="message"></div>
+    </section>
+
+    <footer class="footer">
+      © 2026 Shahin Hospital
+    </footer>
+  </main>
+
+</div>
+<script src="hospital.js"></script>
+</body>
+</html>

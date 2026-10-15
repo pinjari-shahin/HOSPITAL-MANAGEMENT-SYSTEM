@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search Patient | Shahin Hospital</title>
+  <link rel="stylesheet" href="hospital.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">✚ SHAHIN <span>HOSPITAL</span></div>
+    <p class="tagline">Care Beyond Expectations</p>
+    <div class="nav-label">MAIN MENU</div>
+    <nav>
+      <a href="index.html">⌂ Dashboard</a>
+      <a href="insert.html">✚ Register Patient</a>
+      <a href="list.html">☷ All Patients</a>
+      <a class="active" href="listOne.html">⌕ Search Patient</a>
+      <a href="update.html">✎ Update Patient</a>
+      <a href="delete.html">▤ Delete Patient</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h2>Search Patient</h2>
+        <p>Find patient information by ID</p>
+      </div>
+      <span class="status">Patient Lookup</span>
+    </header>
+
+    <section class="card">
+      <h2>⌕ Find Patient</h2>
+      <p>Enter the registered patient ID below.</p>
+
+      <form id="findForm">
+        <div class="field">
+          <label>Patient ID</label>
+          <input type="number" name="patient_id"
+            min="1" required
+            placeholder="Enter Patient ID">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">
+            Search Patient
+          </button>
+        </div>
+      </form>
+      <div id="message"></div>
+    </section>
+
+    <section class="card">
+      <h2>Patient Information</h2>
+      <div id="result">
+        <p>Search for a patient to see their details.</p>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="hospital.js"></script>
+</body>
+</html>

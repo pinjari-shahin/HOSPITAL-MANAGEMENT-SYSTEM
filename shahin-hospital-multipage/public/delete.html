@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete Patient | Shahin Hospital</title>
+  <link rel="stylesheet" href="hospital.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">✚ SHAHIN <span>HOSPITAL</span></div>
+    <p class="tagline">Care Beyond Expectations</p>
+    <div class="nav-label">MAIN MENU</div>
+    <nav>
+      <a href="index.html">⌂ Dashboard</a>
+      <a href="insert.html">✚ Register Patient</a>
+      <a href="list.html">☷ All Patients</a>
+      <a href="listOne.html">⌕ Search Patient</a>
+      <a href="update.html">✎ Update Patient</a>
+      <a class="active" href="delete.html">▤ Delete Patient</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h2>Delete Patient</h2>
+        <p>Remove patient information from the database</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Remove Patient Record</h2>
+      <p>
+        Enter the patient ID you want to delete.
+        This action cannot be undone.
+      </p>
+
+      <form id="deleteForm">
+        <div class="field">
+          <label>Patient ID</label>
+          <input type="number" name="id"
+            min="1" required
+            placeholder="Enter patient ID">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn danger">
+            Delete Patient
+          </button>
+        </div>
+      </form>
+
+      <div id="message"></div>
+    </section>
+  </main>
+</div>
+<script src="hospital.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Update Patient | Shahin Hospital</title>
+  <link rel="stylesheet" href="hospital.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">✚ SHAHIN <span>HOSPITAL</span></div>
+    <p class="tagline">Care Beyond Expectations</p>
+    <div class="nav-label">MAIN MENU</div>
+    <nav>
+      <a href="index.html">⌂ Dashboard</a>
+      <a href="insert.html">✚ Register Patient</a>
+      <a href="list.html">☷ All Patients</a>
+      <a href="listOne.html">⌕ Search Patient</a>
+      <a class="active" href="update.html">✎ Update Patient</a>
+      <a href="delete.html">▤ Delete Patient</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h2>Update Patient</h2>
+        <p>Edit existing patient information</p>
+      </div>
+      <span class="status">Edit Records</span>
+    </header>
+
+    <section class="card">
+      <h2>Find Patient to Update</h2>
+      <form id="loadForm">
+        <div class="field">
+          <label>Patient ID</label>
+          <input type="number" name="id" min="1"
+            required placeholder="Enter patient ID">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn">
+            Load Patient
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card" id="editArea" hidden>
+      <h2>Edit Patient Information</h2>
+
+      <form id="patientForm" data-mode="update">
+        <div class="form-grid">
+          <div class="field">
+            <label>Patient ID</label>
+            <input name="patient_id" readonly>
+          </div>
+
+          <div class="field">
+            <label>Patient Name</label>
+            <input name="patient_name"
+              maxlength="100" required>
+          </div>
+
+          <div class="field">
+            <label>Patient Email</label>
+            <input type="email" name="patient_email"
+              maxlength="100" required>
+          </div>
+
+          <div class="field">
+            <label>Patient Phone Number</label>
+            <input type="tel" name="patient_phoneno"
+              pattern="[0-9]{10}" maxlength="10" required>
+          </div>
+
+          <div class="field">
+            <label>Patient Gender</label>
+            <select name="patient_gender" required>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Patient Age</label>
+            <input type="number" name="patient_age"
+              min="0" max="120" required>
+          </div>
+
+          <div class="field full">
+            <label>Patient Problem</label>
+            <select name="patient_problem" required>
+              <option value="">Select disease / concern</option>
+              <option value="Fever">Fever</option>
+              <option value="Diabetes">Diabetes</option>
+              <option value="Hypertension">Hypertension</option>
+              <option value="Asthma">Asthma</option>
+              <option value="Cardiac Disease">Cardiac Disease</option>
+              <option value="Migraine">Migraine</option>
+              <option value="Fracture">Fracture</option>
+              <option value="Respiratory Infection">Respiratory Infection</option>
+              <option value="Gastroenteritis">Gastroenteritis</option>
+              <option value="Back Pain">Back Pain</option>
+              <option value="Surgery Follow-up">Surgery Follow-up</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">
+            Save Changes
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <div id="message"></div>
+  </main>
+</div>
+<script src="hospital.js"></script>
+</body>
+</html>
